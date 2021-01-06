@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import PortfolioOverview from './class/PortfolioOverview';
+import {Route} from 'react-router';
+import NavBar from './functional/NavBar';
+import ExchangeOverview from './class/ExchangeOverview';
+import coinbaseService from './service/coinbaseService';
 
+const linkedServices = {coinbase:coinbaseService};
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Route exact path='/' render={(props) => <PortfolioOverview {...props} linkedServices={linkedServices}/>} />
+      <Route path='/:exchangeName/exchange-overview' render={(props) => <ExchangeOverview {...props} linkedServices={linkedServices}/>} />
     </div>
   );
 }
