@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import '../App.css'
+import '../../App.css'
 import ExchangeOverview from './ExchangeOverview';
-import coinbaseService from '../service/coinbaseService';
-import cryptoService from '../service/cryptoService';
+import coinbaseService from '../../services/coinbaseService';
+import cryptoService from '../../services/cryptoService';
 import Test from './Test';
 import LinkExchange from '../functional/LinkExchangeOption';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,9 +11,7 @@ class PortfolioOverview extends Component {
 
     // Return true if user has linked service
     linked(service) {
-        if(this.props.linkedServices[service.exchangeInformation.path]) {
-            return true
-        }
+            return this.props.linkedServices[service.exchangeInformation.path] ? true : false
     }
     render(){
         return(

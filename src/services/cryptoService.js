@@ -9,6 +9,8 @@ export const cryptoService = {
     exchangeInformation
 };
 
+// Export request signing to utils?
+
 // const signRequest = (request, apiKey, apiSecret) => {
 //     const { id, method, params, nonce } = request;
   

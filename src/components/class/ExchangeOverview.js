@@ -35,12 +35,9 @@ class ExchangeOverview extends Component {
     serviceFromPath() {
         try {
             const { exchangeName } = this.props.match.params;
-            
-            console.log(exchangeName)
             return this.props.linkedServices[exchangeName]
         } catch(err) {
             console.log(err)
-            
         }
     }
 
@@ -62,7 +59,7 @@ class ExchangeOverview extends Component {
                         </div>
                 ))} */}
                 {this.state.loaded && ExchangeOverviewHeading(this.state.service.exchangeInformation)}
-                {this.state.loaded && this.state.info !== '' && this.state.info.map((data, key) =>
+                {this.state.loaded && this.state.info.map((data, key) =>
                     <div key={key}>
                         {AssetRow(data, this.state.service)}
                     </div>

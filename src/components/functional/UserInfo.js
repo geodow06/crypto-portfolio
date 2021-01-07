@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../functional/Avatar';
+import Avatar from './Avatar';
 
 function UserInfo(props) {
     return(

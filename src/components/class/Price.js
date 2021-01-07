@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import coinbase from '../service/coinbaseService';
+import coinbase from '../../services/coinbaseService';
 
 class Price extends Component {
     constructor(props) {

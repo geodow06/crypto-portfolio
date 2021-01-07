@@ -1,6 +1,6 @@
 import React from 'react';
-import CanvasJSReact from '../canvasjs.react';
-import coinbase from '../service/coinbaseService';
+import CanvasJSReact from '../../canvasjs.react';
+import coinbase from '../../services/coinbaseService';
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
